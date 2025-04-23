@@ -22,6 +22,7 @@ Firewall pfSense
  - Description : WAN
  - IPv4 Configuration : DHCP
  - Block private networks and loopback addresses : □
+ - Block bogon networks : □
 
 ### LAN
 
@@ -29,14 +30,15 @@ Firewall pfSense
  - Description : LAN
  - IPv4 Configuration : Static IPv4 (192.168.200.253 /24)
  - Block private networks and loopback addresses : □
-
+ - Block bogon networks : □
+   
 ### OTP1 (DMZ)
 
  - Enable interface : ✅
  - Description : DMZ
  - IPv4 Configuration : Static IPv4 (192.168.100.254 /24)
  - Block private networks and loopback addresses : □
-
+ - Block bogon networks : □
 
 
 ## pfSense NAT
