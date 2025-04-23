@@ -146,7 +146,7 @@ Firewall pfSense
  - protocol : ICMP
  - Source : DMZ Subnets
  - Destination : This Firewall (self)
- - Description : DMZ vers Firewall - ICMP
+ - Description : DMZ ICMP vers FW (r-ext)
 
 
 
