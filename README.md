@@ -155,10 +155,10 @@ Firewall pfSense
 
  - Destination Network : 172.16.0.0 /24
  - Gateway : RextToRint - 192.168.200.254
- - Description : Route vers réseau infra
+ - Description : Route vers réseau Infra
 
 2ème route : 
 
  - Destination Network : 172.16.64.0 /24
  - Gateway : RextToRint - 192.168.200.254
- - Description : Route vers réseau user
+ - Description : Route vers réseau User
