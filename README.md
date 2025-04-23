@@ -45,7 +45,7 @@ Firewall pfSense
 
  - WAN
  - IPv4
- - TCP/UDP
+ - TCP
  - Destination : This Firewall (self)
  - Destination port range : From HTTPS - To HTTPS
  - Redirecte target IP : Address or Alias - 192.168.100.250
@@ -61,7 +61,7 @@ Firewall pfSense
  - Action : Pass
  - Interface : WAN
  - Address Family : IPv4
- - protocol : TCP/UDP
+ - protocol : TCP
  - Source : ANY
  - Destination : Address or Alias : 192.168.100.250
  - Destination Port Range : From HTTPS To HTTPS
@@ -71,6 +71,40 @@ Firewall pfSense
 
 ### LAN
 
+1er Règle :
+
+ - Action : Pass
+ - Interface : LAN
+ - Address Family : IPv4
+ - protocol : TCP
+ - Source : Network 172.16.64.0 /24
+ - Destination : Address or Alias : 192.168.100.250
+ - Destination Port Range : From HTTPS To HTTPS
+ - Description : HTTPS Réseau User vers Guacamole
+
+2ème Règle :
+
+ - Action : Pass
+ - Disabled : ✅
+ - Interface : LAN
+ - Address Family : IPv4
+ - protocol : ICMP
+ - Source : Network 172.16.64.0 /24
+ - Destination : Address or Alias : 192.168.100.250
+ - Description : Ping Réseau User vers Guacamole
+> :bulb: Règle à activer seulement pour des testes de ping
+
+3ème Règle :
+
+ - Action : Pass
+ - Disabled : ✅
+ - Interface : LAN
+ - Address Family : IPv4
+ - protocol : ICMP
+ - Source : ANY
+ - Destination : This Firewall (self)
+ - Description : Ping vers FW LAN
+> :bulb: Règle à activer seulement pour des testes de ping
 
 ### DMZ
 
