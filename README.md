@@ -138,6 +138,16 @@ Firewall pfSense
  - Destination Port Range : From SSH To SSH
  - Description : Gucamole SSH vers Réseau Infra
 
+4ème Règle : 
+ - Action : Pass
+ - Disabled : ✅
+ - Interface : DMZ
+ - Address Family : IPv4
+ - protocol : ICMP
+ - Source : DMZ Subnets
+ - Destination : This Firewall (self)
+ - Description : DMZ vers Firewall - ICMP
+
 
 
 ## pfSense Routing
