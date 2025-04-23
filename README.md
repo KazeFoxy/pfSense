@@ -2,6 +2,33 @@
 Firewall pfSense
 
 
+## General Setup
+
+- Hostname : r-ext
+- Domain : gsb.lan
+- DNS Servers : 8.8.8.8 et 172.16.0.1
+- DNS Server Override : ✅
+- Timezone : Europe/Paris
+- Timeservers : 2.pfsense.pool.ntp.org
+- Language : English
+
+
+
+## Interfaces
+
+### WAN
+ 
+ - Enable interface : ✅
+ - Description : WAN
+ - IPv4 Configuration : DHCP
+ - Block private networks and loopback addresses : □
+
+### LAN
+
+### OTP1 (DMZ)
+
+
+
 ## pfSense Rules
 
 ### WAN
