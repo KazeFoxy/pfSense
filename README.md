@@ -58,6 +58,16 @@ Firewall pfSense
 
 ### WAN
 
+ - Action : Pass
+ - Interface : WAN
+ - Address Family : IPv4
+ - protocol : TCP/UDP
+ - Source : ANY
+ - Destination : Address or Alias : 192.168.100.250
+ - Destination Port Range : From HTTPS To HTTPS
+ - Description : NAT Rediriger HTTPS vers DMZ depuis le WAN
+
+> :bulb: Règle créée automatiquement !
 
 ### LAN
 
