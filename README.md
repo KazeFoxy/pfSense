@@ -37,6 +37,23 @@ Firewall pfSense
  - IPv4 Configuration : Static IPv4 (192.168.100.254 /24)
  - Block private networks and loopback addresses : □
 
+
+
+## pfSense NAT
+
+### Port Forward
+
+ - WAN
+ - IPv4
+ - TCP/UDP
+ - Destination : This Firewall (self)
+ - Destination port range : From HTTPS - To HTTPS
+ - Redirecte target IP : Address or Alias - 192.168.100.250
+ - Redirecte target port : HTTPS
+ - Description : Rediriger HTTPS vers DMZ depuis le WAN
+
+
+
 ## pfSense Rules
 
 ### WAN
@@ -47,8 +64,6 @@ Firewall pfSense
 
 ### DMZ
 
-
-## pfSense NAT
 
 
 ## pfSense Routing
