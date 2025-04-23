@@ -72,7 +72,6 @@ Firewall pfSense
 ### LAN
 
 1er Règle :
-
  - Action : Pass
  - Interface : LAN
  - Address Family : IPv4
@@ -83,7 +82,6 @@ Firewall pfSense
  - Description : HTTPS Réseau User vers Guacamole
 
 2ème Règle :
-
  - Action : Pass
  - Disabled : ✅
  - Interface : LAN
@@ -95,7 +93,6 @@ Firewall pfSense
 > :bulb: Règle à activer seulement pour des testes de ping
 
 3ème Règle :
-
  - Action : Pass
  - Disabled : ✅
  - Interface : LAN
@@ -107,6 +104,39 @@ Firewall pfSense
 > :bulb: Règle à activer seulement pour des testes de ping
 
 ### DMZ
+
+1er Règle :
+ - Action : Pass
+ - Disabled : ✅
+ - Interface : DMZ
+ - Address Family : IPv4
+ - protocol : TCP
+ - Source : Address or Alias : 192.168.100.250
+ - Destination : Network 172.16.64.0 /24
+ - Destination Port Range : From HTTPS To HTTPS
+ - Description : Gucamole vers Réseau User
+
+2ème Règle :
+ - Action : Pass
+ - Disabled : ✅
+ - Interface : DMZ
+ - Address Family : IPv4
+ - protocol : TCP
+ - Source : Address or Alias : 192.168.100.250
+ - Destination : Network 172.16.0.0 /24
+ - Destination Port Range : From MS RDP To MS RDP
+ - Description : Gucamole RDP vers Réseau Infra
+
+3ème Règle : 
+ - Action : Pass
+ - Disabled : ✅
+ - Interface : DMZ
+ - Address Family : IPv4
+ - protocol : TCP
+ - Source : Address or Alias : 192.168.100.250
+ - Destination : Network 172.16.0.0 /24
+ - Destination Port Range : From SSH To SSH
+ - Description : Gucamole SSH vers Réseau Infra
 
 
 
